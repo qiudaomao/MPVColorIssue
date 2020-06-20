@@ -17,3 +17,4 @@ profile
 DerivedData
 .idea/
 *.xcuserstate
+MPVColorIssue/libmpv/libs/libavcodec.a

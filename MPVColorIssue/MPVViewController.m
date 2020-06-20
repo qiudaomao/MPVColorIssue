@@ -153,20 +153,15 @@ static void wakeup(void *context)
     check_error(mpv_set_option_string(mpv, "log-file", logFile.UTF8String));
     check_error(mpv_request_log_messages(mpv, "info"));
     check_error(mpv_initialize(mpv));
+    
     check_error(mpv_set_option_string(mpv, "vo", "opengl-cb"));
-    check_error(mpv_set_option_string(mpv, "hwdec", "auto"));
-    check_error(mpv_set_option_string(mpv, "hwdec-codecs", "all"));
-    check_error(mpv_request_log_messages(mpv, "info"));
-//    check_error(mpv_set_option_string(mpv, "vo", "opengl-cb"));
-    check_error(mpv_set_option_string(mpv, "vo", "libmpv"));
-    check_error(mpv_set_option_string(mpv, "hwdec", "auto"));
+    check_error(mpv_set_option_string(mpv, "hwdec", "videotoolbox"));
     check_error(mpv_set_option_string(mpv, "dither-depth", "auto"));
     check_error(mpv_set_option_string(mpv, "hwdec-image-format", "nv12"));
+//    check_error(mpv_set_option_string(mpv, "hwdec-image-format", "yuv420p10"));
     check_error(mpv_set_option_string(mpv, "hwdec-codecs", "all"));
     check_error(mpv_set_option_string(mpv, "gpu-hwdec-interop", "auto"));
-    check_error(mpv_set_option_string(mpv, "hwdec", "videotoolbox"));
-    check_error(mpv_set_option_string(mpv, "gpu-dumb-mode", "yes"));
-        
+
     mpv_opengl_cb_context *mpvGL = mpv_get_sub_api(mpv, MPV_SUB_API_OPENGL_CB);
     if (!mpvGL) {
         puts("libmpv does not have the opengl-cb sub-API.");
