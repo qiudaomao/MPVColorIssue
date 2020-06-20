@@ -8,7 +8,7 @@ Verify the color
 
 + iPad abnormal
 
-![](https://github.com/qiudaomao/MPVColorIssue/blob/master/MPVColorIssue/resources/ipad.jpg?raw=true)
+![](https://github.com/qiudaomao/MPVColorIssue/blob/master/MPVColorIssue/resources/ipad1.jpg?raw=true)
 
 + macOS
-![](https://github.com/qiudaomao/MPVColorIssue/blob/master/MPVColorIssue/resources/macOS.jpg?raw=true)
+![](https://github.com/qiudaomao/MPVColorIssue/blob/master/MPVColorIssue/resources/macOS1.jpg?raw=true)
