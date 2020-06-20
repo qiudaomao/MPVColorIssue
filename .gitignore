@@ -18,3 +18,4 @@ DerivedData
 .idea/
 *.xcuserstate
 MPVColorIssue/libmpv/libs/libavcodec.a
+MPVColorIssue.xcodeproj/project.xcworkspace/xcuserdata
