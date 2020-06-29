@@ -56,7 +56,7 @@ static void glupdate(void *ctx);
 
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
     if (!self.context) {
-        NSLog(@"Failed to initialize OpenGLES 2.0 context");
+        NSLog(@"Failed to initialize OpenGLES 3.0 context");
     }
     [EAGLContext setCurrentContext:self.context];
     // Configure renderbuffers created by the view

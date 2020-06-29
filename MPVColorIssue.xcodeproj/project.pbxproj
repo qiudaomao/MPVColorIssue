@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9209CD524A9B2D80094B5CE /* libplacebo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9209CD424A9B2D10094B5CE /* libplacebo.a */; };
+		E9209CD924A9B2DC0094B5CE /* libMoltenVK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9209CD824A9B2D90094B5CE /* libMoltenVK.a */; };
+		E9209CDA24A9B2DC0094B5CE /* libplacebo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9209CD424A9B2D10094B5CE /* libplacebo.a */; };
+		E9209CDB24A9B2DC0094B5CE /* libSPIRVCross.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9209CD624A9B2D90094B5CE /* libSPIRVCross.a */; };
+		E9209CDC24A9B2DC0094B5CE /* libSPIRVTools.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9209CD724A9B2D90094B5CE /* libSPIRVTools.a */; };
+		E9209CDE24A9B3050094B5CE /* libglslang.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E9209CDD24A9B3040094B5CE /* libglslang.a */; };
+		E9209CE024A9B66A0094B5CE /* i-see-fire.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = E9209CDF24A9B66A0094B5CE /* i-see-fire.mp4 */; };
+		E9209CE424A9B8B30094B5CE /* MPVMoltenVKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9209CE224A9B8B30094B5CE /* MPVMoltenVKViewController.m */; };
+		E9209CE524A9B8B30094B5CE /* MPVMoltenVKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9209CE324A9B8B30094B5CE /* MPVMoltenVKViewController.xib */; };
 		E949AD65249DEFB300679F5C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E949AD64249DEFB300679F5C /* AppDelegate.m */; };
 		E949AD68249DEFB300679F5C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E949AD67249DEFB300679F5C /* SceneDelegate.m */; };
 		E949AD6B249DEFB300679F5C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E949AD6A249DEFB300679F5C /* ViewController.m */; };
@@ -60,6 +69,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9209CD424A9B2D10094B5CE /* libplacebo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libplacebo.a; path = MPVColorIssue/libmpv/libs/libplacebo.a; sourceTree = "<group>"; };
+		E9209CD624A9B2D90094B5CE /* libSPIRVCross.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSPIRVCross.a; path = MPVColorIssue/libmpv/libs/libSPIRVCross.a; sourceTree = "<group>"; };
+		E9209CD724A9B2D90094B5CE /* libSPIRVTools.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSPIRVTools.a; path = MPVColorIssue/libmpv/libs/libSPIRVTools.a; sourceTree = "<group>"; };
+		E9209CD824A9B2D90094B5CE /* libMoltenVK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMoltenVK.a; path = MPVColorIssue/libmpv/libs/libMoltenVK.a; sourceTree = "<group>"; };
+		E9209CDD24A9B3040094B5CE /* libglslang.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglslang.a; path = MPVColorIssue/libmpv/libs/libglslang.a; sourceTree = "<group>"; };
+		E9209CDF24A9B66A0094B5CE /* i-see-fire.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "i-see-fire.mp4"; sourceTree = "<group>"; };
+		E9209CE124A9B8B30094B5CE /* MPVMoltenVKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPVMoltenVKViewController.h; sourceTree = "<group>"; };
+		E9209CE224A9B8B30094B5CE /* MPVMoltenVKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPVMoltenVKViewController.m; sourceTree = "<group>"; };
+		E9209CE324A9B8B30094B5CE /* MPVMoltenVKViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MPVMoltenVKViewController.xib; sourceTree = "<group>"; };
 		E949AD60249DEFB300679F5C /* MPVColorIssue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MPVColorIssue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E949AD63249DEFB300679F5C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E949AD64249DEFB300679F5C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -338,10 +356,12 @@
 				E949AEA5249DF1D900679F5C /* libz.tbd in Frameworks */,
 				E949ADC3249DF12800679F5C /* libswresample.a in Frameworks */,
 				E949AEAF249DF21F00679F5C /* libiconv.tbd in Frameworks */,
+				E9209CD924A9B2DC0094B5CE /* libMoltenVK.a in Frameworks */,
 				E949AEA3249DF1CC00679F5C /* libc++.tbd in Frameworks */,
 				E949ADC1249DF12800679F5C /* libavfilter.a in Frameworks */,
 				E949ADA5249DF0CF00679F5C /* libsmb2.a in Frameworks */,
 				E949ADAC249DF0CF00679F5C /* libuchardet.a in Frameworks */,
+				E9209CDE24A9B3050094B5CE /* libglslang.a in Frameworks */,
 				E949ADC0249DF12800679F5C /* libavformat.a in Frameworks */,
 				E949AD9A249DF0CF00679F5C /* libaom.a in Frameworks */,
 				E949AEA9249DF1F900679F5C /* libxml2.tbd in Frameworks */,
@@ -353,16 +373,20 @@
 				E949AD9E249DF0CF00679F5C /* libuuid.a in Frameworks */,
 				E949ADA8249DF0CF00679F5C /* libpng.a in Frameworks */,
 				E949ADC2249DF12800679F5C /* libavutil.a in Frameworks */,
+				E9209CDC24A9B2DC0094B5CE /* libSPIRVTools.a in Frameworks */,
 				E949ADA0249DF0CF00679F5C /* libfreetype.a in Frameworks */,
 				E949AD9F249DF0CF00679F5C /* libdsm.a in Frameworks */,
+				E9209CDB24A9B2DC0094B5CE /* libSPIRVCross.a in Frameworks */,
 				E949ADA7249DF0CF00679F5C /* libtasn1.a in Frameworks */,
 				E949AEAD249DF21700679F5C /* liblzma.tbd in Frameworks */,
 				E949AEB5249DF2CD00679F5C /* CoreMedia.framework in Frameworks */,
+				E9209CDA24A9B2DC0094B5CE /* libplacebo.a in Frameworks */,
 				E949ADA9249DF0CF00679F5C /* libharfbuzz-subset.a in Frameworks */,
 				E949AEB3249DF2B200679F5C /* libexpat.a in Frameworks */,
 				E949AEAB249DF20600679F5C /* AudioToolbox.framework in Frameworks */,
 				E949AD9C249DF0CF00679F5C /* libpng16.a in Frameworks */,
 				E949AD98249DF0CF00679F5C /* libass.a in Frameworks */,
+				E9209CD524A9B2D80094B5CE /* libplacebo.a in Frameworks */,
 				E949ADC6249DF12800679F5C /* libssl.a in Frameworks */,
 				E949ADAB249DF0CF00679F5C /* libnfs.a in Frameworks */,
 				E949AD9D249DF0CF00679F5C /* libfribidi.a in Frameworks */,
@@ -415,6 +439,9 @@
 				E949AD7C249DF03F00679F5C /* MPVViewController.h */,
 				E949AD7D249DF03F00679F5C /* MPVViewController.m */,
 				E949AD7E249DF03F00679F5C /* MPVViewController.xib */,
+				E9209CE124A9B8B30094B5CE /* MPVMoltenVKViewController.h */,
+				E9209CE224A9B8B30094B5CE /* MPVMoltenVKViewController.m */,
+				E9209CE324A9B8B30094B5CE /* MPVMoltenVKViewController.xib */,
 			);
 			path = MPVColorIssue;
 			sourceTree = "<group>";
@@ -796,6 +823,11 @@
 		E949AE9F249DF1B500679F5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9209CDD24A9B3040094B5CE /* libglslang.a */,
+				E9209CD824A9B2D90094B5CE /* libMoltenVK.a */,
+				E9209CD624A9B2D90094B5CE /* libSPIRVCross.a */,
+				E9209CD724A9B2D90094B5CE /* libSPIRVTools.a */,
+				E9209CD424A9B2D10094B5CE /* libplacebo.a */,
 				E949AEB4249DF2CD00679F5C /* CoreMedia.framework */,
 				E949AEB2249DF2AF00679F5C /* libexpat.a */,
 				E949AEB0249DF22A00679F5C /* AVFoundation.framework */,
@@ -815,6 +847,7 @@
 			isa = PBXGroup;
 			children = (
 				E949AEB9249E002200679F5C /* captain.marvel.2019.2160p.uhd.bluray.x265-terminal.sample.mkv */,
+				E9209CDF24A9B66A0094B5CE /* i-see-fire.mp4 */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -876,11 +909,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9209CE524A9B8B30094B5CE /* MPVMoltenVKViewController.xib in Resources */,
 				E949AEBA249E002200679F5C /* captain.marvel.2019.2160p.uhd.bluray.x265-terminal.sample.mkv in Resources */,
 				E949AD80249DF03F00679F5C /* MPVViewController.xib in Resources */,
 				E949AD73249DEFB600679F5C /* LaunchScreen.storyboard in Resources */,
 				E949AD70249DEFB600679F5C /* Assets.xcassets in Resources */,
 				E949AD6E249DEFB300679F5C /* Main.storyboard in Resources */,
+				E9209CE024A9B66A0094B5CE /* i-see-fire.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -895,6 +930,7 @@
 				E949AD65249DEFB300679F5C /* AppDelegate.m in Sources */,
 				E949AD7F249DF03F00679F5C /* MPVViewController.m in Sources */,
 				E949AD76249DEFB600679F5C /* main.m in Sources */,
+				E9209CE424A9B8B30094B5CE /* MPVMoltenVKViewController.m in Sources */,
 				E949AD68249DEFB300679F5C /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
