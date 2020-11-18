@@ -2,6 +2,7 @@
 git clone https://github.com/qiudaomao/MPVColorIssue.git
 cd MPVColorIssue/MPVColorIssue/libmpv/libs
 tar xvfj libavcodec.a.tar.bz2
+tar xvfj MetalANGLE.xcframework.tar.bz2
 Open MPVColorIssue.xcodeproj choose target, modify to your Team at 'Signing & Capabilities".
 Verify the color
 ```
