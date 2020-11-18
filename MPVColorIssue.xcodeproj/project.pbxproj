@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,7 +66,23 @@
 		E949AEB3249DF2B200679F5C /* libexpat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E949AEB2249DF2AF00679F5C /* libexpat.a */; };
 		E949AEB5249DF2CD00679F5C /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E949AEB4249DF2CD00679F5C /* CoreMedia.framework */; };
 		E949AEBA249E002200679F5C /* captain.marvel.2019.2160p.uhd.bluray.x265-terminal.sample.mkv in Resources */ = {isa = PBXBuildFile; fileRef = E949AEB9249E002200679F5C /* captain.marvel.2019.2160p.uhd.bluray.x265-terminal.sample.mkv */; };
+		E94F2B532564D00200965053 /* MetalANGLE.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = E94F2B522564D00200965053 /* MetalANGLE.xcframework */; };
+		E94F2B542564D00200965053 /* MetalANGLE.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E94F2B522564D00200965053 /* MetalANGLE.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E94F2B552564D00300965053 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E94F2B542564D00200965053 /* MetalANGLE.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E9209CD424A9B2D10094B5CE /* libplacebo.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libplacebo.a; path = MPVColorIssue/libmpv/libs/libplacebo.a; sourceTree = "<group>"; };
@@ -344,6 +360,8 @@
 		E949AEB2249DF2AF00679F5C /* libexpat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libexpat.a; path = "../../../website/LazyCat/BytePlayer/DanMuPlayer/dependency/mpv/lib-ios/libexpat.a"; sourceTree = "<group>"; };
 		E949AEB4249DF2CD00679F5C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		E949AEB9249E002200679F5C /* captain.marvel.2019.2160p.uhd.bluray.x265-terminal.sample.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; path = "captain.marvel.2019.2160p.uhd.bluray.x265-terminal.sample.mkv"; sourceTree = "<group>"; };
+		E94F2B4D2564CA2800965053 /* MetalANGLE.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MetalANGLE.xcframework; path = ../../github/tvos.mpv.player/contrib/metalangle/build_out/MetalANGLE.xcframework; sourceTree = "<group>"; };
+		E94F2B522564D00200965053 /* MetalANGLE.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MetalANGLE.xcframework; path = MPVColorIssue/libmpv/libs/MetalANGLE.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,6 +377,7 @@
 				E9209CD924A9B2DC0094B5CE /* libMoltenVK.a in Frameworks */,
 				E949AEA3249DF1CC00679F5C /* libc++.tbd in Frameworks */,
 				E949ADC1249DF12800679F5C /* libavfilter.a in Frameworks */,
+				E94F2B532564D00200965053 /* MetalANGLE.xcframework in Frameworks */,
 				E949ADA5249DF0CF00679F5C /* libsmb2.a in Frameworks */,
 				E949ADAC249DF0CF00679F5C /* libuchardet.a in Frameworks */,
 				E9209CDE24A9B3050094B5CE /* libglslang.a in Frameworks */,
@@ -823,6 +842,8 @@
 		E949AE9F249DF1B500679F5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E94F2B4D2564CA2800965053 /* MetalANGLE.xcframework */,
+				E94F2B522564D00200965053 /* MetalANGLE.xcframework */,
 				E9209CDD24A9B3040094B5CE /* libglslang.a */,
 				E9209CD824A9B2D90094B5CE /* libMoltenVK.a */,
 				E9209CD624A9B2D90094B5CE /* libSPIRVCross.a */,
@@ -862,6 +883,7 @@
 				E949AD5C249DEFB300679F5C /* Sources */,
 				E949AD5D249DEFB300679F5C /* Frameworks */,
 				E949AD5E249DEFB300679F5C /* Resources */,
+				E94F2B552564D00300965053 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1072,7 +1094,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SGZE33W2XX;
 				INFOPLIST_FILE = MPVColorIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1095,7 +1117,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = SGZE33W2XX;
 				INFOPLIST_FILE = MPVColorIssue/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

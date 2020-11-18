@@ -10,7 +10,7 @@
 #import "MPVViewController.h"
 #import "MPVMoltenVKViewController.h"
 
-#define MOLTEN_VK 1
+#define MOLTEN_VK 0
 
 @interface ViewController () {
 #if MOLTEN_VK

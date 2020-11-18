@@ -41,6 +41,7 @@ static void wakeup(void *context)
     metalLayer = CAMetalLayer.new;
     metalLayer.framebufferOnly = YES;
     metalLayer.frame = self.view.layer.frame;
+    metalLayer.drawableSize = self.view.frame.size;
     [self.view.layer addSublayer:metalLayer];
 
     mpv = mpv_create();
@@ -79,6 +80,7 @@ static void wakeup(void *context)
     
 - (void)viewDidLayoutSubviews {
     metalLayer.frame = self.view.layer.frame;
+    metalLayer.drawableSize = self.view.frame.size;
     NSLog(@"resize to %.2f %.2f %.2f %.2f",
           metalLayer.frame.origin.x,
           metalLayer.frame.origin.y,

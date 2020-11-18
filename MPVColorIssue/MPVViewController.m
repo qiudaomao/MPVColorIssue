@@ -12,9 +12,6 @@
 
 @end
 
-@import GLKit;
-@import OpenGLES;
-
 #import "ViewController.h"
 
 #import "mpv/client.h"
@@ -23,6 +20,17 @@
 #import <stdio.h>
 #import <stdlib.h>
 
+#define USE_METALANGLE 1
+
+#if USE_METALANGLE
+#import <MetalANGLE/MGLKit.h>
+#import <MetalANGLE/MGLContext.h>
+#import <MetalANGLE/MGLKView.h>
+#import <MetalANGLE/GLES2/gl2.h>
+#else
+@import GLKit;
+@import OpenGLES;
+#endif
 
 static inline void check_error(int status)
 {
@@ -34,7 +42,11 @@ static inline void check_error(int status)
 static void *get_proc_address(void *ctx, const char *name)
 {
     CFStringRef symbolName = CFStringCreateWithCString(kCFAllocatorDefault, name, kCFStringEncodingASCII);
+#if USE_METALANGLE
+    void *addr = CFBundleGetFunctionPointerForName(CFBundleGetBundleWithIdentifier(CFSTR("com.google.OpenGLES")), symbolName);
+#else
     void *addr = CFBundleGetFunctionPointerForName(CFBundleGetBundleWithIdentifier(CFSTR("com.apple.opengles")), symbolName);
+#endif
     CFRelease(symbolName);
     NSLog(@"get_proc_address %s => %p", name, addr);
     return addr;
@@ -42,9 +54,15 @@ static void *get_proc_address(void *ctx, const char *name)
 
 static void glupdate(void *ctx);
 
+#if USE_METALANGLE
+@interface MpvClientOGLView : MGLKView
+    @property mpv_opengl_cb_context *mpvGL;
+@end
+#else
 @interface MpvClientOGLView : GLKView
     @property mpv_opengl_cb_context *mpvGL;
 @end
+#endif
 
 @implementation MpvClientOGLView {
     GLint defaultFBO;
@@ -54,15 +72,27 @@ static void glupdate(void *ctx);
 {
     [super awakeFromNib];
 
+#if USE_METALANGLE
+    self.context = [[MGLContext alloc] initWithAPI:kMGLRenderingAPIOpenGLES2];
+#else
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES3];
+#endif
     if (!self.context) {
         NSLog(@"Failed to initialize OpenGLES 3.0 context");
     }
+#if USE_METALANGLE
+    [MGLContext setCurrentContext:self.context];
+    // Configure renderbuffers created by the view
+    self.drawableColorFormat = MGLDrawableColorFormatRGBA8888;
+    self.drawableDepthFormat = MGLDrawableDepthFormatNone;
+    self.drawableStencilFormat = MGLDrawableStencilFormatNone;
+#else
     [EAGLContext setCurrentContext:self.context];
     // Configure renderbuffers created by the view
     self.drawableColorFormat = GLKViewDrawableColorFormatRGBA8888;
     self.drawableDepthFormat = GLKViewDrawableDepthFormatNone;
     self.drawableStencilFormat = GLKViewDrawableStencilFormatNone;
+#endif
     
     defaultFBO = -1;
 }
